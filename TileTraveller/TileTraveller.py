@@ -3,6 +3,7 @@
 # Then the user gets to choose which direction he wants to go to until he
 # finally reaches the victory tile. I dont like this solution at all because
 # of all of the if statements that I use to implement the functionality.
+# Github = https://github.com/jnbjarni/HR_forritun
 
 victory = False
 posX = 1
@@ -21,7 +22,7 @@ while victory == False:
         print("You can travel: (E)ast or (S)outh.")
         possibleMoves = "EeSs"
     elif posX == 2 and posY == 2 or posX == 3 and posY == 3:
-        print("You can travel: (W)est or (S)outh.")
+        print("You can travel: (S)outh or (W)est.")
         possibleMoves = "WwSs"
     elif posX == 2 and posY == 3:
         print("You can travel: (E)ast or (W)est.")
@@ -48,4 +49,4 @@ while victory == False:
             validMove = True
         else:
             print("Not a valid direction!")
-print("Victory")
+print("Victory!")
