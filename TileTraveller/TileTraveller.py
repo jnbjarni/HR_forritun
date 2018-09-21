@@ -33,10 +33,8 @@ while victory == False:
     else:
         print("You can travel: (N)orth or (S)outh.")
         possibleMoves = "NnSs"
-
     while validMove == False:
         direction = input("Direction: ").lower()
-
         if direction in possibleMoves:
             if direction == "n":
                 posY = posY + 1
