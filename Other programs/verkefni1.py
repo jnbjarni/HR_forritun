@@ -1,15 +1,29 @@
-# Each ticket cost $30. Senior citizens (age >= 65) are given a 50% discount. Children under (or equal to) the age of 5 get a free admission.
-# Write a program that prompts for the visitor's age and computes the ticket price (which should be a float).
 
-age = int(input("Input age: "))  # Do not change this line
-price = 0
+def get_list():
+    a_list = input(
+        "Enter elements of list separated by commas: ").strip().split(',')
+    return a_list
 
-if age >= 60:
-    price = float(30 / 2)
-    print(price)
-elif age < 6:
-    price = 0.0
-    print(price)
-else:
-    price = 30.0
-    print(price)
+
+def get_integer(prompt):
+    val = int(input(prompt))
+    return val
+
+
+def transform(list1, list2, r1, r2):
+    slicedList = list1[r1:r2]
+    slicedList = slicedList[::-1]
+    del list1[r1:r2]
+    for element in slicedList:
+        list2.append(element)
+
+
+
+# Main program starts here - DO NOT change it
+list1 = get_list()
+list2 = get_list()
+index1 = get_integer("Enter from value: ")
+index2 = get_integer("Enter to value: ")
+transform(list1, list2, index1, index2)
+print(list1)
+print(list2)
